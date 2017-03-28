@@ -2,6 +2,7 @@ var $ = require('jquery');
 var View = require('jquery-simple-view');
 var MainNav = require('js/components/mainNav');
 var MainSearch = require('js/components/mainSearch');
+var GallerySidebar = require('js/components/gallerySidebar');
 
 module.exports = View.extend({
 
@@ -26,6 +27,7 @@ module.exports = View.extend({
 
         this.mainNav = this.addView(new MainNav({$el: $('.mainNav')}));
         this.mainSearch =  this.addView(new MainSearch({$el: $('.mainSearch')}));
+        this.gallerySidebar = this.addView(new GallerySidebar({$el: $('.imageGallery div a')}));
 
         return this;
 

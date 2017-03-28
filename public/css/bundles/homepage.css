@@ -476,6 +476,7 @@ th {
   display: block;
   z-index: -1;
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.6);
+  background-color: #FFF;
 }
 
 .slbImage {
@@ -1658,20 +1659,53 @@ body {
   border-bottom: 2px solid #EAEAEA;
 }
 
-.listModuleType2 > ul {
+@media screen and (min-width: 45.0625em) {
+  .listModuleType2 {
+    border-radius: 0.4em;
+  }
+}
+
+.listModuleType2 .imageGallery {
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+.listModuleType2 .imageGallery .grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.listModuleType2 .imageGallery .grid a.cell {
+  margin: 3px;
+  width: 8em;
+}
+
+.listModuleType2 .imageGallery .grid a.cell img.responsive-image {
+  display: block;
+  max-width: 100%;
+}
+
+.listModuleType3 {
+  background-color: #fff;
+  padding: 1em 2em;
+  border-bottom: 2px solid #EAEAEA;
+}
+
+.listModuleType3 > ul {
   padding: 3em 0;
 }
 
-.listModuleType2 > ul > li {
+.listModuleType3 > ul > li {
   margin-top: 2.5em;
 }
 
-.listModuleType2 > ul > li:first-child {
+.listModuleType3 > ul > li:first-child {
   margin-top: 0;
 }
 
 @media screen and (min-width: 45.0625em) {
-  .listModuleType2 {
+  .listModuleType3 {
     border-radius: 0.4em;
   }
 }

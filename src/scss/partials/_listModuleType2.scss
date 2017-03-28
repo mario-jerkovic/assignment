@@ -1,20 +1,34 @@
 .listModuleType2 {
 
-    background-color: #fff; padding: 1em 2em;
-    border-bottom: 2px solid $colorGrayLight1;
+  background-color: #fff;
+  padding: 1em 2em;
+  border-bottom: 2px solid $colorGrayLight1;
 
-    > ul {
+  @include mediaMinWidth($breakpointMedium) {
 
-        padding: 3em 0;
+    border-radius: 0.4em;
 
-        > li { margin-top: 2.5em; &:first-child { margin-top: 0; } }
+  }
 
+  .imageGallery {
+    margin: 0 auto;
+    padding: 2em 0;
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+
+      a.cell {
+        margin: 3px;
+        width: 8em;
+
+        img.responsive-image {
+          display: block;
+          max-width: 100%;
+        }
+      }
     }
-
-    @include mediaMinWidth($breakpointMedium) {
-
-        border-radius: 0.4em;
-
-    }
+  }
 
 }
