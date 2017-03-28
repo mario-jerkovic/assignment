@@ -7,10 +7,12 @@ module.exports = View.extend({
 
     initialize: function(options) {
 
+      $.get('login-modal.html', function (response) {
         $.simpleLightbox.open({
-            content: $('.loginModal').clone(),
-            elementClass: 'slbContentEl'
+          content: response,
+          elementClass: 'slbContentEl'
         });
+      });
 
     }
 

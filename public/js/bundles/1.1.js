@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 9:
+/***/ 11:
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
@@ -12,10 +12,12 @@ webpackJsonp([1],{
 
 	    initialize: function(options) {
 
+	      $.get('login-modal.html', function (response) {
 	        $.simpleLightbox.open({
-	            content: $('.loginModal').clone(),
-	            elementClass: 'slbContentEl'
+	          content: response,
+	          elementClass: 'slbContentEl'
 	        });
+	      });
 
 	    }
 
