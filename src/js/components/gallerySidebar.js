@@ -4,8 +4,8 @@ require('simple-lightbox');
 
 module.exports = View.extend({
 
-  initialize: function() {
-    this.$el.simpleLightbox();
-  }
+    initialize: function() {
+        this.$el.simpleLightbox();
+    }
 
 });

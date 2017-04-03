@@ -12,12 +12,12 @@ webpackJsonp([1],{
 
 	    initialize: function(options) {
 
-	      $.get('login-modal.html', function (response) {
-	        $.simpleLightbox.open({
-	          content: response,
-	          elementClass: 'slbContentEl'
+	        $.get('login-modal.html', function(response) {
+	            $.simpleLightbox.open({
+	                content: response,
+	                elementClass: 'slbContentEl'
+	            });
 	        });
-	      });
 
 	    }
 
