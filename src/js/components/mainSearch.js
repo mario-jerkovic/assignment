@@ -1,15 +1,20 @@
 var View = require('jquery-simple-view');
 
-require('fastsearch');
-
 module.exports = View.extend({
 
     initialize: function() {
+        var input = this.$('.query');
 
-        this.$('.query').fastsearch({
-            onItemSelect: 'fillInput'
+        input.on('input', function() {
+            require.ensure(['fastsearch'], function() {
+                require('fastsearch');
+
+                input.fastsearch({
+                    onItemSelect: 'fillInput'
+                });
+
+            });
         });
-
     }
 
 });

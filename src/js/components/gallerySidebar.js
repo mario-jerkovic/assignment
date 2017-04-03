@@ -1,11 +1,17 @@
 var View = require('jquery-simple-view');
 
-require('simple-lightbox');
-
 module.exports = View.extend({
 
     initialize: function() {
-        this.$el.simpleLightbox();
-    }
+        var self = this;
 
+        self.$el.on('click', function(event) {
+            event.preventDefault();
+
+            require.ensure(['simple-lightbox'], function() {
+                require('simple-lightbox');
+                self.$el.simpleLightbox();
+            });
+        });
+    }
 });

@@ -65,6 +65,10 @@ module.exports = function(grunt) {
                     {
                         src: '<%= settings.srcPath %>html/index.html',
                         dest: '<%= settings.distPath %>index.html'
+                    },
+                    {
+                        src: '<%= settings.srcPath %>html/login-modal.html',
+                        dest: '<%= settings.distPath %>login-modal.html'
                     }
                 ]
             }
